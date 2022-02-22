@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <script src="scripts.js"></script>
+    <link href="styles.css" rel="stylesheet">
+    <head>
+        <title>Sudoku Solver</title>
+    </head>
+    <body>
+        <h1>Sudoku Solver</h1>
+        <form>
+            <table cellspacing="0">
+                <tr>
+                <td><input type="number" id="r1c1" class="r1 c1"></td>
+                <td><input type="number" id="r1c2" class="r1 c2"></td>
+                <td><input type="number" id="r1c3" class="r1 c3"></td>
+                <td><input type="number" id="r1c4" class="r1 c4"></td>
+                <td><input type="number" id="r1c5" class="r1 c5"></td>
+                <td><input type="number" id="r1c6" class="r1 c6"></td>
+                <td><input type="number" id="r1c7" class="r1 c7"></td>
+                <td><input type="number" id="r1c8" class="r1 c8"></td>
+                <td><input type="number" id="r1c9" class="r1 c9"></td>
+                </tr>
+                <tr>
+                <td><input type="number" id="r2c1" class="r2 c1"></td>
+                <td><input type="number" id="r2c2" class="r2 c2"></td>
+                <td><input type="number" id="r2c3" class="r2 c3"></td>
+                <td><input type="number" id="r2c4" class="r2 c4"></td>
+                <td><input type="number" id="r2c5" class="r2 c5"></td>
+                <td><input type="number" id="r2c6" class="r2 c6"></td>
+                <td><input type="number" id="r2c7" class="r2 c7"></td>
+                <td><input type="number" id="r2c8" class="r2 c8"></td>
+                <td><input type="number" id="r2c9" class="r2 c9"></td>
+                </tr>
+                <tr>
+                <td><input type="number" id="r3c1" class="r3 c1"></td>
+                <td><input type="number" id="r3c2" class="r3 c2"></td>
+                <td><input type="number" id="r3c3" class="r3 c3"></td>
+                <td><input type="number" id="r3c4" class="r3 c4"></td>
+                <td><input type="number" id="r3c5" class="r3 c5"></td>
+                <td><input type="number" id="r3c6" class="r3 c6"></td>
+                <td><input type="number" id="r3c7" class="r3 c7"></td>
+                <td><input type="number" id="r3c8" class="r3 c8"></td>
+                <td><input type="number" id="r3c9" class="r3 c9"></td>
+                </tr>
+                <tr>
+                <td><input type="number" id="r4c1" class="r4 c1"></td>
+                <td><input type="number" id="r4c2" class="r4 c2"></td>
+                <td><input type="number" id="r4c3" class="r4 c3"></td>
+                <td><input type="number" id="r4c4" class="r4 c4"></td>
+                <td><input type="number" id="r4c5" class="r4 c5"></td>
+                <td><input type="number" id="r4c6" class="r4 c6"></td>
+                <td><input type="number" id="r4c7" class="r4 c7"></td>
+                <td><input type="number" id="r4c8" class="r4 c8"></td>
+                <td><input type="number" id="r4c9" class="r4 c9"></td>
+                </tr>
+                <tr>
+                <td><input type="number" id="r5c1" class="r5 c1"></td>
+                <td><input type="number" id="r5c2" class="r5 c2"></td>
+                <td><input type="number" id="r5c3" class="r5 c3"></td>
+                <td><input type="number" id="r5c4" class="r5 c4"></td>
+                <td><input type="number" id="r5c5" class="r5 c5"></td>
+                <td><input type="number" id="r5c6" class="r5 c6"></td>
+                <td><input type="number" id="r5c7" class="r5 c7"></td>
+                <td><input type="number" id="r5c8" class="r5 c8"></td>
+                <td><input type="number" id="r5c9" class="r5 c9"></td>
+                </tr>
+                <tr>
+                <td><input type="number" id="r6c1" class="r6 c1"></td>
+                <td><input type="number" id="r6c2" class="r6 c2"></td>
+                <td><input type="number" id="r6c3" class="r6 c3"></td>
+                <td><input type="number" id="r6c4" class="r6 c4"></td>
+                <td><input type="number" id="r6c5" class="r6 c5"></td>
+                <td><input type="number" id="r6c6" class="r6 c6"></td>
+                <td><input type="number" id="r6c7" class="r6 c7"></td>
+                <td><input type="number" id="r6c8" class="r6 c8"></td>
+                <td><input type="number" id="r6c9" class="r6 c9"></td>
+                </tr>
+                <tr>
+                <td><input type="number" id="r7c1" class="r7 c1"></td>
+                <td><input type="number" id="r7c2" class="r7 c2"></td>
+                <td><input type="number" id="r7c3" class="r7 c3"></td>
+                <td><input type="number" id="r7c4" class="r7 c4"></td>
+                <td><input type="number" id="r7c5" class="r7 c5"></td>
+                <td><input type="number" id="r7c6" class="r7 c6"></td>
+                <td><input type="number" id="r7c7" class="r7 c7"></td>
+                <td><input type="number" id="r7c8" class="r7 c8"></td>
+                <td><input type="number" id="r7c9" class="r7 c9"></td>
+                </tr>
+                <tr>
+                <td><input type="number" id="r8c1" class="r8 c1"></td>
+                <td><input type="number" id="r8c2" class="r8 c2"></td>
+                <td><input type="number" id="r8c3" class="r8 c3"></td>
+                <td><input type="number" id="r8c4" class="r8 c4"></td>
+                <td><input type="number" id="r8c5" class="r8 c5"></td>
+                <td><input type="number" id="r8c6" class="r8 c6"></td>
+                <td><input type="number" id="r8c7" class="r8 c7"></td>
+                <td><input type="number" id="r8c8" class="r8 c8"></td>
+                <td><input type="number" id="r8c9" class="r8 c9"></td>
+                </tr>
+                <tr>
+                <td><input type="number" id="r9c1" class="r9 c1"></td>
+                <td><input type="number" id="r9c2" class="r9 c2"></td>
+                <td><input type="number" id="r9c3" class="r9 c3"></td>
+                <td><input type="number" id="r9c4" class="r9 c4"></td>
+                <td><input type="number" id="r9c5" class="r9 c5"></td>
+                <td><input type="number" id="r9c6" class="r9 c6"></td>
+                <td><input type="number" id="r9c7" class="r9 c7"></td>
+                <td><input type="number" id="r9c8" class="r9 c8"></td>
+                <td><input type="number" id="r9c9" class="r9 c9"></td>
+                </tr>
+            </table>
+            <div class="wrapper">
+                <button type="button" id="solve" onclick="solution()">Solve</button>
+                <button id="reset">Reset</button>
+            </div>
+        </form>
+        <p id="feedback"></p>
+    </body>
+</html>
