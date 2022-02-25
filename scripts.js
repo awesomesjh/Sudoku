@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function(){
         });
         inputs[i].addEventListener("input", function(){
             if (this.value == 0){
-                console.log("nn");
                 this.value = "";
             }
             if (this.value.length > 1){
